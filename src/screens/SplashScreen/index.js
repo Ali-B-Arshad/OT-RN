@@ -23,7 +23,7 @@ const Component = ({ navigation }) => {
 
   useEffect(() => {
     if (!Loading) {
-      navigation.navigate('Login');
+      navigation.navigate('Auth');
     }
   }, [Loading]);
 

@@ -1,45 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Text, View } from 'react-native';
-import Container from '../../components/Universal/container';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { loginRequest } from '../../redux/actions';
-import AppForm from '../../components/AppForm/AppForm';
-import AppFormField from '../../components/AppForm/AppFormField';
-//Native Exports Ends Here
-//Third Party Exports Starts
+// Native Imports
+import 'react-native-gesture-handler';
+import React from 'react';
+import { Drawer } from 'react-native-paper';
+import BottomNav from '../../navigations/MainStack/MainStack';
 
-//Third Party Exports Ends
+const user = true;
 
-const Component = ({ loginRequest, userInfo }) => {
-  useEffect(() => {
-    // loginRequest();
-  }, []);
-  useEffect(() => {
-    // console.log('UserInfo on Home screen', userInfo);
-  });
-  // , [userInfo]
+const HomeScreen = () => {
   return (
-    <Container>
-      {/* <Text>Lgin</Text> */}
-      <View>
-        <AppForm >
-          <AppFormField label="Email" name="Email" />
-          <AppFormField label="Password" name="Password" secureTextEntry={true} />
-        </AppForm>
-      </View>
-    </Container>
-  );
-};
+    <>
+      <Drawer.Item
+        // style={{ backgroundColor: '#64ffda' }}
+        icon="star"
+        label="First Item"
+      />
+      <BottomNav />
+      {/* {user ?  : ""} */}
 
-function mapStatesToProps(state) {
-  return {
-    userInfo: state.userInformation,
-  };
+
+    </>
+  );
+
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  loginRequest: bindActionCreators(loginRequest, dispatch),
-});
-
-export default connect(mapStatesToProps, mapDispatchToProps)(Component);
+export default HomeScreen;

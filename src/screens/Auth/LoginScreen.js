@@ -18,8 +18,8 @@ import ComponentsStyle from '../../styles/ComponentsStyle';
 import * as Yup from "yup";
 
 // Api Imports
-import authAPI from '../../api/auth';
-import useAuth from '../../auth/useAuth';
+import authAPI from '../../utils/api/auth';
+import useAuth from '../../utils/auth/useAuth';
 
 
 var { width, height } = Dimensions.get('window');
@@ -43,7 +43,7 @@ const LoginScreen = ({ navigation }) => {
   }
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('../../assets/splashscreen.jpg')} style={styles.image}>
+      <ImageBackground source={require('../../assets/images/splashscreen.png')} style={styles.image}>
         <View style={styles.child}>
           <View style={{ alignSelf: "center" }}>
             <Text style={styles.titleText}>Sign In</Text>

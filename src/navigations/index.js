@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeStack from './HomeStack';
-import LoginScreen from '../screens/Auth/LoginScreen';
-import SignupScreen from '../screens/Auth/SignUpScreen';
+import AuthStack from './AuthStack'
 import SplashScreen from '../screens/SplashScreen';
 // Auth Imports
-import AuthContext from '../auth/context';
-import authStorage from '../auth/storage';
+import AuthContext from '../utils/auth/context';
+import authStorage from '../utils/auth/storage';
+import HomeScreen from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
+
 
 function MainNavigator() {
 
@@ -33,9 +33,8 @@ function MainNavigator() {
             headerShown: false,
           }}>
           <Stack.Screen name="SplashScreen" component={SplashScreen} />
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Signup" component={SignupScreen} />
-          {/* <Stack.Screen name="Home" component={HomeStack} /> */}
+          <Stack.Screen name="Auth" component={AuthStack} />
+          <Stack.Screen name="Home" component={HomeScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </AuthContext.Provider>

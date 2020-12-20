@@ -18,11 +18,11 @@ import * as Yup from "yup";
 
 // Api Imports
 // import authAPI from '../../api/auth';
-import userApi from '../../api/user';
+import userApi from '../../utils/api/user';
 
 // import jwtDecode from 'jwt-decode';
 // import AuthContext from '../../auth/context';
-import useAuth from '../../auth/useAuth';
+import useAuth from '../../utils/auth/useAuth';
 import ErrorMessage from '../../components/AppForm/ErrorMessage';
 
 var { width, height } = Dimensions.get('window')
@@ -66,7 +66,7 @@ const SignUpScreen = ({ navigation }) => {
   }
   return (
     // <ScrollView style={styles.container}>
-    <ImageBackground source={require('../../assets/splashscreen.jpg')} style={styles.image}>
+    <ImageBackground source={require('../../assets/images/splashscreen.png')} style={styles.image}>
       <View style={styles.child}>
         <View style={{ alignSelf: "center" }}>
           <Text style={styles.titleText}>Sign Up</Text>
