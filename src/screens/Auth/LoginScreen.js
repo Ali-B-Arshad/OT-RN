@@ -9,7 +9,7 @@ import AppFormField from '../../components/AppForm/AppFormField';
 import SubmitButton from '../../components/AppForm/SubmitButton';
 import AppForm from '../../components/AppForm/AppForm';
 import ErrorMessage from '../../components/AppForm/ErrorMessage';
-import AppButton from '../../components/AppButton';
+import AppButton from '../../components/AppForm/AppButton';
 
 // Style Imports
 import ComponentsStyle from '../../styles/ComponentsStyle';

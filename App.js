@@ -2,7 +2,7 @@ import React from 'react';
 import Onetouch from './src/Onetouch';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
-import { PaperProvider } from 'react-native-paper';
+import { Provider as PaperProvider, DefaultTheme, configureFonts } from 'react-native-paper';
 
 const fontConfig = {
   default: {

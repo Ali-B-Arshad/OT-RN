@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import Container from '../../components/Universal/container';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -22,10 +22,12 @@ const Component = ({ loginRequest, userInfo }) => {
   return (
     <Container>
       {/* <Text>Lgin</Text> */}
-      <AppForm >
-        <AppFormField label="Email" name="Email" />
-        <AppFormField label="Password" name="Password" secureTextEntry={true} />
-      </AppForm>
+      <View>
+        <AppForm >
+          <AppFormField label="Email" name="Email" />
+          <AppFormField label="Password" name="Password" secureTextEntry={true} />
+        </AppForm>
+      </View>
     </Container>
   );
 };

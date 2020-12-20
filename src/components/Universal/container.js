@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import styles from '../../res/styles/index.styles';
 
 //Native Exports Ends Here

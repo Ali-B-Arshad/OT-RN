@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {View, StatusBar} from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, StatusBar } from 'react-native';
 import SplashScreenLogoAnimation from './splash.json';
 import LottieView from 'lottie-react-native';
 //Native Exports Ends Here
@@ -7,7 +7,7 @@ import LottieView from 'lottie-react-native';
 
 //Third Party Exports Ends
 
-const Component = ({navigation}) => {
+const Component = ({ navigation }) => {
   const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Component = ({navigation}) => {
 
   useEffect(() => {
     if (!Loading) {
-      navigation.navigate('Home');
+      navigation.navigate('Login');
     }
   }, [Loading]);
 
@@ -38,7 +38,7 @@ const Component = ({navigation}) => {
     }}>
       <LottieView
         source={SplashScreenLogoAnimation}
-        style={{width: '100%'}}
+        style={{ width: '100%' }}
         autoPlay
         loop
       />
