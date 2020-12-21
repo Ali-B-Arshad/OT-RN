@@ -3,7 +3,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { View, Text, ScrollView, Image, ImageBackground, Dimensions } from 'react-native';
 import { Button, List } from 'react-native-paper';
-
+import Empty from '../../assets/svgs/empty.svg';
 
 // Styles Imports
 import ScreenStyles from '../../styles/ScreenStyles'
@@ -40,11 +40,14 @@ const UserProjects = () => {
 
 const display = () => {
     return (
-        <View><Text>Somthing to Display</Text></View>
+        <View style={styles.centered} >
+            <Empty />
+            <Text>Nothing to Display</Text>
+        </View>
     );
 }
 
-const UserProfileScreen = ({ navigation }) => {
+const Inbox = ({ navigation }) => {
     const { user, logOut } = useAuth();
 
     return (
@@ -55,18 +58,18 @@ const UserProfileScreen = ({ navigation }) => {
             <View>
                 <Tab.Navigator
                     tabBarOptions={TabNavigatorStyle.userProfileTab}>
-                    <Tab.Screen name="Projects" component={display} />
-                    <Tab.Screen name="About" component={display} />
-                    <Tab.Screen name="Remote Firm" component={display} />
-                    <Tab.Screen name="Design a room" component={display} />
+                    <Tab.Screen name="To Review" component={display} />
+                    <Tab.Screen name="Assigned" component={display} />
+                    <Tab.Screen name="All" component={display} />
+                    {/* <Tab.Screen name="Design a room" component={display} /> */}
                 </Tab.Navigator>
             </View>
         </ScrollView>
     );
 
 }
-
-const profileAvatar = {
+let ScreenHeight = Dimensions.get("window").height;
+const styles = {
     border: "none",
     marginVertical: 15,
     alignItems: 'center',
@@ -81,8 +84,14 @@ const profileAvatar = {
         fontWeight: "normal",
         color: "#495464",
         fontFamily: 'Poppins-Medium',
+    },
+    centered: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: ScreenHeight,
+        // flex: 1,
     }
 }
 
 
-export default UserProfileScreen;
+export default Inbox;

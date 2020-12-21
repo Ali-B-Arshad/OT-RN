@@ -11,8 +11,6 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import UserProfileScreen from '../../screens/BasicScreen/UserProfileScreen';
 
 
-const MusicRoute = () => <Text>Music</Text>;
-
 const AlbumsRoute = () => <Text>Albums</Text>;
 
 const RecentsRoute = () => <Text>Recents</Text>;
@@ -44,7 +42,7 @@ const BottomNav = () => {
                 options={({ route, navigation }) => ({
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="home" color={color} size={35} />
+                        <MaterialCommunityIcons name="inbox" color={color} size={35} />
                     ),
                     // tabBarVisible: ((route) => {
                     //     let routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
@@ -55,13 +53,13 @@ const BottomNav = () => {
                 })}
             />
             <Tab.Screen
-                name="Store"
+                name="Planner"
                 //   From Store Stack Screen will be avaible 
                 component={AlbumsRoute}
                 options={{
-                    tabBarLabel: 'Store',
+                    tabBarLabel: 'Planner',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="store" color={color} size={35} />
+                        <MaterialCommunityIcons name="note" color={color} size={35} />
                     ),
 
                 }}
@@ -74,6 +72,28 @@ const BottomNav = () => {
                     tabBarLabel: 'Add',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="plus-circle" color={color} size={35} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Calendar"
+                //   Still have to figure out, how to do this
+                component={RecentsRoute}
+                options={{
+                    tabBarLabel: 'Calendar',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="calendar" color={color} size={35} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Settings"
+                //   Still have to figure out, how to do this
+                component={RecentsRoute}
+                options={{
+                    tabBarLabel: 'Settings',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="account-settings" color={color} size={35} />
                     ),
                 }}
             />
