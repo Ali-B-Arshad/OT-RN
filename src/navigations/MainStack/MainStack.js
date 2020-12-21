@@ -11,7 +11,7 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import Inbox from '../../screens/BasicScreen/Inbox';
 import Calendar from '../../screens/BasicScreen/Calendar';
 import Publish from '../../screens/BasicScreen/Publish';
-
+import Profile from '../../screens/BasicScreen/Profile';
 const AlbumsRoute = () => <Text>Albums</Text>;
 
 const RecentsRoute = () => <Text>Recents</Text>;
@@ -90,7 +90,7 @@ const BottomNav = () => {
             <Tab.Screen
                 name="Settings"
                 //   Still have to figure out, how to do this
-                component={RecentsRoute}
+                component={Profile}
                 options={{
                     tabBarLabel: 'Settings',
                     tabBarIcon: ({ color, size }) => (
