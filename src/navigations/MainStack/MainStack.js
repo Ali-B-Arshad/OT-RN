@@ -8,8 +8,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Entypo from 'react-native-vector-icons/Entypo';
 import { Text } from 'react-native-paper';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import UserProfileScreen from '../../screens/BasicScreen/UserProfileScreen';
-
+import Inbox from '../../screens/BasicScreen/Inbox';
+import Calendar from '../../screens/BasicScreen/Calendar';
+import Publish from '../../screens/BasicScreen/Publish';
 
 const AlbumsRoute = () => <Text>Albums</Text>;
 
@@ -38,7 +39,7 @@ const BottomNav = () => {
             <Tab.Screen
                 name="Home"
                 //   The Main Home Screen ------ From App Stack All Screen availale from that stack navigator
-                component={UserProfileScreen}
+                component={Inbox}
                 options={({ route, navigation }) => ({
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
@@ -65,11 +66,11 @@ const BottomNav = () => {
                 }}
             />
             <Tab.Screen
-                name="Add"
+                name="Publish"
                 //   Still have to figure out, how to do this
-                component={RecentsRoute}
+                component={Publish}
                 options={{
-                    tabBarLabel: 'Add',
+                    tabBarLabel: 'Publish',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="plus-circle" color={color} size={35} />
                     ),
@@ -78,7 +79,7 @@ const BottomNav = () => {
             <Tab.Screen
                 name="Calendar"
                 //   Still have to figure out, how to do this
-                component={RecentsRoute}
+                component={Calendar}
                 options={{
                     tabBarLabel: 'Calendar',
                     tabBarIcon: ({ color, size }) => (

@@ -1,16 +1,11 @@
 // Native Imports
 import 'react-native-gesture-handler';
 import React from 'react';
-import MaterialComunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import BottomNav from '../../navigations/MainStack/MainStack';
-import { StyleSheet, View, Image, ImageBackground, Dimensions } from 'react-native';
-import { Drawer, Appbar, Text, Button } from 'react-native-paper';
-const user = true;
-import UserProfileScreen from '../BasicScreen/UserProfileScreen';
+import { StyleSheet } from 'react-native';
+
 
 const HomeScreen = ({ navigation }) => {
-  const [active, setActive] = React.useState('');
-
   return (
     <>
       {/* <Drawer.Section title="Profiles">

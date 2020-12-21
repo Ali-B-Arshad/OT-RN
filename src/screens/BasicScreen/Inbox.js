@@ -17,7 +17,6 @@ import TabNavigatorStyle from '../../styles/TabNavigatorStyle';
 // Auth Imports
 import useAuth from '../../utils/auth/useAuth';
 
-
 // Screen Imports
 // import UserProjectsScreen from './UserProjectsScreen';
 // import UserPostsScreen from './UserPostsScreen';
