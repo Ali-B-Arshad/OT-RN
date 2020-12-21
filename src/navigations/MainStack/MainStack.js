@@ -8,6 +8,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Entypo from 'react-native-vector-icons/Entypo';
 import { Text } from 'react-native-paper';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import UserProfileScreen from '../../screens/BasicScreen/UserProfileScreen';
+
 
 const MusicRoute = () => <Text>Music</Text>;
 
@@ -38,18 +40,18 @@ const BottomNav = () => {
             <Tab.Screen
                 name="Home"
                 //   The Main Home Screen ------ From App Stack All Screen availale from that stack navigator
-                component={MusicRoute}
+                component={UserProfileScreen}
                 options={({ route, navigation }) => ({
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="home" color={color} size={35} />
                     ),
-                    tabBarVisible: ((route) => {
-                        let routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
-                        console.log(routeName);
-                        if (routeName === 'Home') return true;
-                        else return false;
-                    })(route),
+                    // tabBarVisible: ((route) => {
+                    //     let routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
+                    //     console.log(routeName);
+                    //     if (routeName === 'Home') return true;
+                    //     else return false;
+                    // })(route),
                 })}
             />
             <Tab.Screen
