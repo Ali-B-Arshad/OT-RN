@@ -29,22 +29,25 @@ const HomeScreen = ({ navigation }) => {
       </Drawer.Section> */}
       {/* <UserProfileScreen /> */}
 
-      <View>
+      {/* <View> 
         <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", backgroundColor: "black" }}>
           <Button
             icon={() => <MaterialComunityIcons name="menu" size={25} color="white" />}
             onPress={() => navigation.openDrawer()} />
           <Text style={{ width: Dimensions.get('window').width / 1.6 }}></Text>
-          {/* <Button
+           <Button
             icon={() => <MaterialComunityIcons name="account-edit" size={30}
               color="#1B262C" />}
             onPress={() => navigation.navigate("Edit Profile")}
-          /> */}
+          /> 
         </View>
       </View>
+      * /}
+
+      
+      {/* {user ?  : ""} */}
 
       <BottomNav />
-      {/* {user ?  : ""} */}
 
 
     </>
